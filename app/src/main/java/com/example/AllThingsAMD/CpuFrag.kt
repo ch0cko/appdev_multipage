@@ -39,6 +39,8 @@ class CpuFrag : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val cpuFragView = inflater.inflate(R.layout.fragment_cpu, container, false)
+
+        // creates variables for fragment buttons
         val cpu1Button = cpuFragView.findViewById<Button>(R.id.cpu1More)
         val cpu2Button = cpuFragView.findViewById<Button>(R.id.cpu2More)
         val cpu3Button = cpuFragView.findViewById<Button>(R.id.cpu3More)
@@ -50,6 +52,7 @@ class CpuFrag : Fragment() {
         val cpu9Button = cpuFragView.findViewById<Button>(R.id.cpu9More)
         val cpu10Button = cpuFragView.findViewById<Button>(R.id.cpu10More)
 
+        // sets eventhandling on button click, redirecting users to a webpage
         cpu1Button.setOnClickListener {
             val link = Uri.parse("https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html") // missing 'http://' will cause crashed
             val intent = Intent(Intent.ACTION_VIEW, link)

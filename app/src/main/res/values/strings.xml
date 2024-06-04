@@ -1,22 +1,27 @@
 <resources>
+
+    <!-- text for login page and app buttons -->
     <string name="app_name">All Things AMD</string>
     <string name="moreButton">More...</string>
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
 
+    <!-- text for profile page -->
     <string name="profile">Login Information</string>
     <string name="backToMain">Back</string>
     <string name="editInfoButton">Edit</string>
     <string name="editInfo">Edit Login Information</string>
     <string name="saveInfo">Save</string>
 
+    <!-- text for about tab -->
     <string name="about_title">Welcome to All Things AMD!</string>
     <string name="introduction">All Things AMD is an app designed to help you stay up to date with all things AMD! Check out the latest releases of CPU\'s and GPU\'s from Team Red!</string>
     <string name="cpuText">AMD\'s lineup of desktop processors are here to deliver the absolute best performance for whatever you may need. The Ryzen chips provide all the computing power you\'ll need with minimal effects on power draw and thermals.</string>
     <string name="gpuText">The Radeon lineup of GPU\'s from AMD boast the same reputation as the Ryzen CPU\'s, providing you with the graphical processing strength that rivals even NVidia.</string>
     <string name="disclaimer">DISCLAIMER: This app serves only as a project for an assessment submission, borne of a passion towards AMD and their products. No monetization of any sort is present within this application.</string>
 
+    <!-- text for cpu tab -->
     <string name="cpu1">Ryzen 5 7600</string>
     <string name="cpu2">Ryzen 5 7600X</string>
     <string name="cpu3">Ryzen 7 7700</string>
@@ -28,6 +33,7 @@
     <string name="cpu9">Ryzen 9 7950X</string>
     <string name="cpu10">Ryzen 9 7950X3D</string>
 
+    <!-- text for gpu tab -->
     <string name="gpu1">Radeon RX 7600</string>
     <string name="gpu2">Radeon RX 7600XT</string>
     <string name="gpu3">Radeon RX 7700XT</string>

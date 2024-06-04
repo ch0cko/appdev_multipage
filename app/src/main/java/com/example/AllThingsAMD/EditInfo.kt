@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 
 class EditInfo : AppCompatActivity() {
+    // creates variables for .xml widgets
     private lateinit var newUsername: EditText
     private lateinit var newPassword: EditText
     private lateinit var saveButton: Button
@@ -20,26 +21,32 @@ class EditInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_info)
 
+        // links .xml widgets to variables
         newUsername = findViewById(R.id.newUser)
         newPassword = findViewById(R.id.newPass)
         saveButton = findViewById(R.id.saveInfo)
         backButton = findViewById(R.id.back)
 
+        // stores new user info on same SharedPreferences variables
         newUserPreferences = getSharedPreferences("userLogin", Context.MODE_PRIVATE)
         newPasswordPreferences = getSharedPreferences("passLogin", Context.MODE_PRIVATE)
 
+        // sets eventhandling for save button
         saveButton.setOnClickListener {
+            // saves new username input to SharedPreferences
             val userInput = newUsername.text.toString()
             val userEditor = newUserPreferences.edit()
             userEditor.putString("text", userInput)
             userEditor.apply()
 
+            // saves new password input to SharedPreferences
             val passInput = newPassword.text.toString()
             val passEditor = newPasswordPreferences.edit()
             passEditor.putString("text", passInput)
             passEditor.apply()
         }
 
+        // returns to profile page
         backButton.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)

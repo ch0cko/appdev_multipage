@@ -38,6 +38,8 @@ class GpuFrag : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val gpuFragView = inflater.inflate(R.layout.fragment_gpu, container, false)
+
+        // creates variables for fragment buttons
         val gpu1Button = gpuFragView.findViewById<Button>(R.id.gpu1More)
         val gpu2Button = gpuFragView.findViewById<Button>(R.id.gpu2More)
         val gpu3Button = gpuFragView.findViewById<Button>(R.id.gpu3More)
@@ -45,6 +47,7 @@ class GpuFrag : Fragment() {
         val gpu5Button = gpuFragView.findViewById<Button>(R.id.gpu5More)
         val gpu6Button = gpuFragView.findViewById<Button>(R.id.gpu6More)
 
+        // sets eventhandling on button click, redirecting users to a webpage
         gpu1Button.setOnClickListener {
             val link = Uri.parse("https://www.amd.com/en/products/graphics/desktops/radeon/7000-series/amd-radeon-rx-7600.html") // missing 'http://' will cause crashed
             val intent = Intent(Intent.ACTION_VIEW, link)
